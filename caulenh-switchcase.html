@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type ="number" id ="ngaythang">
+    <button type ="button" onclick="tinhsongay()">TinhSoNgay</button>
+    <br>
+    <br>
+</form>
+<h3 id ="display1"></h3>
+<script>
+    function tinhsongay() {
+        let songaytrongthang = parseInt(document.getElementById("ngaythang").value);
+        switch (songaytrongthang){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("display1").innerHTML = "thang " + songaytrongthang + " co 31 ngay";
+                break;
+            case 2:
+                document.getElementById("display1").innerHTML = "thang 2 co 28 hoac 29 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("display1").innerHTML = "thang " + songaytrongthang + " co 30 ngay";
+        }
+    }
+</script>
+</body>
+</html>
